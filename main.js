@@ -12,6 +12,7 @@
             const currentChar = plainString.charAt(i);
             if (!currentChar.match(letters)) {
                 mockString += currentChar;
+                continue;
             } else if (isCap) {
                 mockString += currentChar.toUpperCase();
             } else {
