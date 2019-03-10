@@ -1,9 +1,10 @@
 (function() {
-    const button = document.getElementById('mockifyButton');
-    const inputTextEl = document.getElementById('inputText');
-    const outputTextEl = document.getElementById('outputText');
+    const button = document.querySelector('#mockifyButton');
+    const inputTextEl = document.querySelector('#inputText');
+    const outputTextEl = document.querySelector('#outputText');
 
-    button.addEventListener('click', () => {
+    const mockifyText = (e) => {
+        e.preventDefault();
         const plainString = inputTextEl.value.toLowerCase();
         let isCap = Math.floor(Math.random() * 10) % 2 === 0 ? true : false;
         let mockString = '';
@@ -21,5 +22,7 @@
             isCap = !isCap;
         }
         outputTextEl.innerText = mockString;
-    });
+    }
+
+    button.addEventListener('click', mockifyText);
 })();
