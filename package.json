@@ -1,0 +1,22 @@
+{
+  "name": "benjaminrlawrence.github.io",
+  "version": "1.0.0",
+  "description": "## SpongeBob Mockify 1. Find text worthy of mocking. 2. Enter it into the input. 3. Click the button. 4. eNjOy YoUr MoCkInG tExT!",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminrlawrence/benjaminrlawrence.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminrlawrence/benjaminrlawrence.github.io/issues"
+  },
+  "homepage": "https://github.com/benjaminrlawrence/benjaminrlawrence.github.io#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
