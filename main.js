@@ -1,4 +1,4 @@
-(function() {
+(() => {
     const button = document.querySelector('#mockifyButton');
     const inputTextEl = document.querySelector('#inputText');
     const outputTextEl = document.querySelector('#outputText');
