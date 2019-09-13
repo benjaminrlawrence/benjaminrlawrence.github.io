@@ -2,6 +2,8 @@
     const button = document.querySelector('#mockifyButton');
     const inputTextEl = document.querySelector('#inputText');
     const outputTextEl = document.querySelector('#outputText');
+    const copyButton = document.querySelector('#copyButton');
+    const hiddenInput = document.querySelector('#hiddenInput');
 
     const mockifyText = (e) => {
         e.preventDefault();
@@ -22,7 +24,21 @@
             isCap = !isCap;
         }
         outputTextEl.innerText = mockString;
+        hiddenInput.value = mockString;
+        if (document.execCommand) {
+            copyButton.setAttribute('style', 'display:block');
+        }
+    }
+
+    const copyToClipboard = (e) => {
+        e.preventDefault();
+        hiddenInput.select();
+        document.execCommand('copy');
+        // var copyText = document.getElementById('outputText');
+        // copyText.select();
+        
     }
 
     button.addEventListener('click', mockifyText);
+    copyButton.addEventListener('click', copyToClipboard);
 })();
