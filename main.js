@@ -33,10 +33,7 @@
     const copyToClipboard = (e) => {
         e.preventDefault();
         hiddenInput.select();
-        document.execCommand('copy');
-        // var copyText = document.getElementById('outputText');
-        // copyText.select();
-        
+        document.execCommand('copy');   
     }
 
     button.addEventListener('click', mockifyText);
